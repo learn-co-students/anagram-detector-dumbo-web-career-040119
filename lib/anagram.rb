@@ -10,7 +10,7 @@ class Anagram
   end
 
   def match(array)
-    real_anagram = array.find {|option| option.split("").sort == @word.split("").sort && option.size == word.size }
+    real_anagram = array.select {|option| option.split("").sort == @word.split("").sort && option.size == word.size }
   end
 
 end
